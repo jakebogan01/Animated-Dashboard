@@ -1324,7 +1324,15 @@
                                 <object type="image/svg+xml" data="animations/analytics/views-by-topic-type-data.svg"></object>
                             </div>
                         </div>
-                        <div class="bg-white border border-gray-300 lg:col-span-12 p-4">
+                        <div class="relative bg-white border border-gray-300 lg:col-span-12 hover:scale-[1.02] group transition hover:z-50">
+                        <div class="absolute -top-1.5 -left-1.5 rounded-full bg-[#CB7C2E] w-3.5 h-3.5 group-hover:hidden">
+                            <div class="rounded-full bg-[#CB7C2E] w-full h-full animate-ping"></div>
+                        </div>
+                        <div class="hidden group-hover:block absolute top-[5px] left-1/2 -translate-x-1/2 w-[325px] rounded-xl bg-[#051444] text-white py-2 px-4 z-50">
+                            <span class="inline-block text-lg font-bold tracking-wide mb-1">Content Type Rankings</span>
+                            <span class="inline-block text-base font-medium tracking-wide">See how content types are performing during the respective date range based on page views, qualified leads and success rate for your resource library, as well as across your peers in the same industry.</span>
+                        </div>
+                        <div class="h-full border-[5px] border-transparent group-hover:border-red-500 rounded p-4 transition">
                           <div class="flex items-center justify-between">
                             <h2 class="text-lg font-semibold mb-2">Content Type Rankings</h2>
                           </div>
@@ -1548,8 +1556,17 @@
                                 </tfoot>
                             </table>
                           </div>
+                          </div>
                         </div>
-                        <div class="bg-white border border-gray-300 lg:col-span-12 p-4">
+                        <div class="relative bg-white border border-gray-300 lg:col-span-12 hover:scale-[1.02] group transition hover:z-50">
+                        <div class="absolute -top-1.5 -left-1.5 rounded-full bg-[#CB7C2E] w-3.5 h-3.5 group-hover:hidden">
+                            <div class="rounded-full bg-[#CB7C2E] w-full h-full animate-ping"></div>
+                        </div>
+                        <div class="hidden group-hover:block absolute top-[5px] left-1/2 -translate-x-1/2 w-[325px] rounded-xl bg-[#051444] text-white py-2 px-4 z-50">
+                            <span class="inline-block text-lg font-bold tracking-wide mb-1">Topic Rankings</span>
+                            <span class="inline-block text-base font-medium tracking-wide">See how topics are performing during the respective date range based on page views, qualified leads and success rate for your resource library, as well as across your peers in the same industry.</span>
+                        </div>
+                        <div class="h-full border-[5px] border-transparent group-hover:border-red-500 rounded p-4 transition">
                           <div class="flex items-center justify-between"><h2 class="text-lg font-semibold mb-2">Topic Rankings</h2>
                           </div>
                           <div class="align-middle min-w-full overflow-x-auto shadow overflow-hidden">
@@ -1772,435 +1789,272 @@
                                 </tfoot>
                             </table>
                           </div>
-                        </div>
-                        <div class="bg-white border border-gray-300 lg:col-span-12 p-4">
-                          <div class="flex items-center justify-between"><h2 class="text-lg font-semibold mb-2">Resource Analytics</h2>
                           </div>
-                          <div class="align-middle min-w-full overflow-x-auto shadow overflow-hidden">
-                            <div class="flex justify-between mb-4">
-                              <div class="sm:w-1/6 flex items-center gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                  <path fill-rule="evenodd"
-                                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                <div class="flex rounded-none shadow-sm"><input
-                                        class="flex-1 form-input border-cool-gray-300 block w-full ease-in-out sm:text-sm sm:leading-5 dark:border-gray-500 rounded-none"
-                                        placeholder="Search..."></div>
-                              </div>
-                            </div>
-                            <table class="min-w-full divide-y divide-cool-gray-300 ">
-                              <thead>
-                              <tr class="bg-white font-bold">
-                                <td class="text-center text-primary text-dashboardHeader text-2xl py-5 bg-cool-gray-100 " colspan="3">
-                                  Top Resources
-                                </td>
-                                <td class="text-center text-primary text-dashboardHeader text-xl bg-cool-gray-200 py-5" colspan="3">ACC
-                                  Partner Knowledge Center
-                                </td>
-                                <td class="text-center text-primary text-dashboardHeader text-xl border-l bg-cool-gray-300 py-5"
-                                    colspan="3"> Legal Industry
-                                </td>
-                              </tr>
-                              </thead>
-                              <thead>
-                              <tr>
-                                <th class="px-6 py-3 bg-cool-gray-50 "><span
-                                        class="text-left text-xs leading-4 font-medium text-cool-gray-500 font-semibold uppercase tracking-wider">Rank</span>
-                                </th>
-                                <th class="px-6 py-3 bg-cool-gray-50 ">
-                                  <button class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider ">
-                                    <span>Resource</span> <span class="relative flex items-center"> <svg class="w-3 h-3 opacity-0 "
-                                                                                                         fill="none"
-                                                                                                         stroke="currentColor"
-                                                                                                         viewBox="0 0 24 24"
-                                                                                                         xmlns="http://www.w3.org/2000/svg"><path
-                                          stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 15l7-7 7 7"></path></svg> </span></button>
-                                </th>
-                                <th class="px-6 py-3 bg-cool-gray-50 ">
-                                  <button class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider ">
-                                    <span>Advertiser</span> <span class="relative flex items-center"> <svg class="w-3 h-3 opacity-0 "
-                                                                                                           fill="none"
-                                                                                                           stroke="currentColor"
-                                                                                                           viewBox="0 0 24 24"
-                                                                                                           xmlns="http://www.w3.org/2000/svg"><path
-                                          stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 15l7-7 7 7"></path></svg> </span></button>
-                                </th>
-                                <th class="px-6 py-3 bg-cool-gray-50 whitespace-nowrap">
-                                  <button class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider ">
-                                    <span>Views</span> <span class="relative flex items-center"> <svg class="w-3 h-3" fill="none"
-                                                                                                      stroke="currentColor"
-                                                                                                      viewBox="0 0 24 24"
-                                                                                                      xmlns="http://www.w3.org/2000/svg"><path
-                                          stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 15l7-7 7 7"></path></svg> </span></button>
-                                </th>
-                                <th class="px-6 py-3 bg-cool-gray-50 ">
-                                  <button class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider ">
-                                    <span>Leads</span> <span class="relative flex items-center"> <svg class="w-3 h-3 opacity-0 "
-                                                                                                      fill="none" stroke="currentColor"
-                                                                                                      viewBox="0 0 24 24"
-                                                                                                      xmlns="http://www.w3.org/2000/svg"><path
-                                          stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 15l7-7 7 7"></path></svg> </span></button>
-                                </th>
-                                <th class="px-6 py-3 bg-cool-gray-50 whitespace-nowrap">
-                                  <button class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider ">
-                                    <span>Success Rate</span> <span class="relative flex items-center"> <svg class="w-3 h-3 opacity-0 "
-                                                                                                             fill="none"
-                                                                                                             stroke="currentColor"
-                                                                                                             viewBox="0 0 24 24"
-                                                                                                             xmlns="http://www.w3.org/2000/svg"><path
-                                          stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 15l7-7 7 7"></path></svg> </span></button>
-                                </th>
-                                <th class="px-6 py-3 bg-cool-gray-50 ">
-                                  <button class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider ">
-                                    <span>Views</span> <span class="relative flex items-center"> <svg class="w-3 h-3 opacity-0 "
-                                                                                                      fill="none" stroke="currentColor"
-                                                                                                      viewBox="0 0 24 24"
-                                                                                                      xmlns="http://www.w3.org/2000/svg"><path
-                                          stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 15l7-7 7 7"></path></svg> </span></button>
-                                </th>
-                                <th class="px-6 py-3 bg-cool-gray-50 ">
-                                  <button class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider ">
-                                    <span>Leads</span> <span class="relative flex items-center"> <svg class="w-3 h-3 opacity-0 "
-                                                                                                      fill="none" stroke="currentColor"
-                                                                                                      viewBox="0 0 24 24"
-                                                                                                      xmlns="http://www.w3.org/2000/svg"><path
-                                          stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 15l7-7 7 7"></path></svg> </span></button>
-                                </th>
-                                <th class="px-6 py-3 bg-cool-gray-50 whitespace-nowrap">
-                                  <button class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider ">
-                                    <span>Success Rate</span> <span class="relative flex items-center"> <svg class="w-3 h-3 opacity-0 "
-                                                                                                             fill="none"
-                                                                                                             stroke="currentColor"
-                                                                                                             viewBox="0 0 24 24"
-                                                                                                             xmlns="http://www.w3.org/2000/svg"><path
-                                          stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M5 15l7-7 7 7"></path></svg> </span></button>
-                                </th>
-                              </tr>
-                              </thead>
-                              <tbody class="bg-white divide-y divide-cool-gray-300 ">
-                              <tr class="bg-white ">
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600 ">
-                                  # 1
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 whitespace-normal max-w-lg text-cool-gray-600 ">
-                                  The Enterprise Legal Reputation Report
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l "> Onit</td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  1,275
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  454
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  35.61 %
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300 bg-cool-gray-200 ">
-                                  3,148
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  945
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  30.02 %
-                                </td>
-                              </tr>
-                              <tr class="bg-white ">
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600 ">
-                                  # 2
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 whitespace-normal max-w-lg text-cool-gray-600 ">
-                                  Turning Contracts into a Powerhouse of Insights, Control, Efficiency, and Visibility
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l "> SirionLabs</td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  1,103
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  392
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  35.54 %
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300 bg-cool-gray-200 ">
-                                  2,058
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  641
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  31.15 %
-                                </td>
-                              </tr>
-                              <tr class="bg-white ">
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600 ">
-                                  # 3
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 whitespace-normal max-w-lg text-cool-gray-600 ">
-                                  How to Successfully Navigate Change Management: A Guide for Legal Operations
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l "> SimpleLegal
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  1,051
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  297
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  28.26 %
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300 bg-cool-gray-200 ">
-                                  2,898
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  554
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  19.12 %
-                                </td>
-                              </tr>
-                              <tr class="bg-white ">
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600 ">
-                                  # 4
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 whitespace-normal max-w-lg text-cool-gray-600 ">
-                                  How to Manage Legal Holds in Slack
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l "> Logikcull</td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  1,015
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  238
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  23.45 %
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300 bg-cool-gray-200 ">
-                                  1,024
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  244
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  23.83 %
-                                </td>
-                              </tr>
-                              <tr class="bg-white ">
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600 ">
-                                  # 5
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 whitespace-normal max-w-lg text-cool-gray-600 ">
-                                  Trends in eDiscovery Document Review
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l "> Epiq</td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  973
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  292
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  30.01 %
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300 bg-cool-gray-200 ">
-                                  1,051
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  337
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  32.06 %
-                                </td>
-                              </tr>
-                              <tr class="bg-white ">
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600 ">
-                                  # 6
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 whitespace-normal max-w-lg text-cool-gray-600 ">
-                                  The Five Pitfalls of CLM Software Selection
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l "> Agiloft</td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  904
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  233
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  25.77 %
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300 bg-cool-gray-200 ">
-                                  908
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  233
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  25.66 %
-                                </td>
-                              </tr>
-                              <tr class="bg-white ">
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600 ">
-                                  # 7
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 whitespace-normal max-w-lg text-cool-gray-600 ">
-                                  Data Privacy Compliance 101: A Guide for Corporate Legal
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l "> SimpleLegal
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  835
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  258
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  30.90 %
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300 bg-cool-gray-200 ">
-                                  2,412
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  613
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  25.41 %
-                                </td>
-                              </tr>
-                              <tr class="bg-white ">
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600 ">
-                                  # 8
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 whitespace-normal max-w-lg text-cool-gray-600 ">
-                                  The Three Key Data Points Your Legal Ops Needs to Track
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l "> ContractPodAi
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  767
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  228
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  29.73 %
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300 bg-cool-gray-200 ">
-                                  1,507
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  413
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  27.41 %
-                                </td>
-                              </tr>
-                              <tr class="bg-white ">
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600 ">
-                                  # 9
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 whitespace-normal max-w-lg text-cool-gray-600 ">
-                                  The 4 Things to Get Right When Operationalizing a Data Privacy Plan
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l "> LinkSquares,
-                                  Inc.
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  730
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  44
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  6.03 %
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300 bg-cool-gray-200 ">
-                                  735
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  44
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  5.99 %
-                                </td>
-                              </tr>
-                              <tr class="bg-white ">
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600 ">
-                                  # 10
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 whitespace-normal max-w-lg text-cool-gray-600 ">
-                                  7 Things to Consider When Renegotiating Your Law Firm Rates
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l "> Bodhala</td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  692
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  138
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-cool-gray-50 ">
-                                  19.94 %
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300 bg-cool-gray-200 ">
-                                  1,513
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  330
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-cool-gray-200 ">
-                                  21.81 %
-                                </td>
-                              </tr>
-                              </tbody>
-                              <tfoot>
-                              <tr>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 font-bold" colspan="3">
-                                  <div class="py-3 flex justify-between align-center">
-                                    <div class=""> Showing <select class="font-bold bg-gray-100 text-center rounded">
-                                      <option>5</option>
-                                      <option>10</option>
-                                      <option>25</option>
-                                      <option>50</option>
-                                      <option value="321">All</option>
-                                    </select><span class="px-1">of</span> 321
+                        </div>
+                        <div class="relative bg-white border border-gray-300 lg:col-span-12 hover:scale-[1.02] group transition hover:z-50">
+                                <div class="absolute -top-1.5 -left-1.5 rounded-full bg-[#CB7C2E] w-3.5 h-3.5 group-hover:hidden">
+                                    <div class="rounded-full bg-[#CB7C2E] w-full h-full animate-ping"></div>
+                                </div>
+                                <div class="hidden group-hover:block absolute top-[5px] left-1/2 -translate-x-1/2 w-[325px] rounded-xl bg-[#051444] text-white py-2 px-4 z-50">
+                                    <span class="inline-block text-lg font-bold tracking-wide mb-1">Resource Analytics</span>
+                                    <span class="inline-block text-base font-medium tracking-wide">View the performance of individual resources in your resource library during the respective date range, including page views, qualified leads and “success rate” (% of qualified leads to page views), as well as the performance of resources across your peers in the same industry.</span>
+                                </div>
+                                <div class="h-full border-[5px] border-transparent group-hover:border-red-500 rounded p-4 transition">
+                                    <div class="flex items-center justify-between">
+                                        <h2 class="text-lg font-semibold mb-2">Resource Analytics</h2>
                                     </div>
-                                    <div class=" font-bold text-right">Totals</div>
-                                  </div>
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l ">
-                                  9,345
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l ">
-                                  2,574
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l ">
-                                  27.54 %
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l ">
-                                  17,254
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l ">
-                                  4,354
-                                </td>
-                                <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l ">
-                                  25.23 %
-                                </td>
-                              </tr>
-                              </tfoot>
-                            </table>
-                          </div>
-                        </div>
+                                    <div class="align-middle min-w-full overflow-x-auto shadow overflow-hidden">
+                                        <div class="flex justify-between mb-4">
+                                            <div class="sm:w-1/6 flex items-center gap-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                                                <div class="flex rounded-none shadow-sm">
+                                                    <div class="flex items-center pl-3 w-[175px] h-[39px] border border-[#CFD8E3] bg-white text-[#9FA6B2] text-[15px]">
+                                                        <span>Search...</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <table class="min-w-full divide-y divide-cool-gray-300 ">
+                                            <thead>
+                                                <tr class="bg-white font-bold">
+                                                    <td class="text-center text-primary text-dashboardHeader text-2xl py-5 bg-[#F1F5F9]" colspan="3">Top Resources</td>
+                                                    <td class="text-center text-primary text-dashboardHeader text-xl bg-[#E2E8F0]" colspan="3">ACC Partner Knowledge Center</td>
+                                                    <td class="text-center text-primary text-dashboardHeader text-xl border-l bg-[#CFD8E3] py-5" colspan="3"> Legal Industry</td>
+                                                </tr>
+                                            </thead>
+                                            <thead>
+                                                <tr>
+                                                    <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                        <span class="text-left text-xs leading-4 font-medium text-cool-gray-500 font-semibold uppercase tracking-wider">Rank</span>
+                                                    </th>
+                                                    <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                    <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                        <span>Resource</span>
+                                                                    </span>
+                                                    </th>
+                                                    <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                    <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                        <span>Advertiser</span>
+                                                                    </span>
+                                                    </th>
+                                                    <th class="px-6 py-3 bg-[#F8FAFC] whitespace-nowrap">
+                                                                    <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                        <span>Views</span>
+                                                                    </span>
+                                                    </th>
+                                                    <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                    <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                        <span>Leads</span>
+                                                                    </span>
+                                                    </th>
+                                                    <th class="px-6 py-3 bg-[#F8FAFC] whitespace-nowrap">
+                                                                    <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                        <span>Success Rate</span>
+                                                                    </span>
+                                                    </th>
+                                                    <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                    <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                        <span>Views</span>
+                                                                    </span>
+                                                    </th>
+                                                    <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                    <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                        <span>Leads</span>
+                                                                    </span>
+                                                    </th>
+                                                    <th class="px-6 py-3 bg-[#F8FAFC] whitespace-nowrap">
+                                                                    <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                        <span>Success Rate</span>
+                                                                    </span>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="bg-white divide-y divide-cool-gray-300">
+                                                <tr class="bg-white">
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                                        # 1
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 whitespace-normal max-w-lg text-cool-gray-600">
+                                                        The Enterprise Legal Reputation Report
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l">
+                                                        Labore Firm
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-[#F8FAFC]">
+                                                        1,275
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-[#F8FAFC]">
+                                                        454
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-[#F8FAFC]">
+                                                        35.61 %
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300 bg-[#E2E7EF]">
+                                                        3,148
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-[#E2E7EF]">
+                                                        945
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-[#E2E7EF]">
+                                                        30.02 %
+                                                    </td>
+                                                </tr>
+                                                <tr class="bg-white">
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                                        # 2
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 whitespace-normal max-w-lg text-cool-gray-600">
+                                                        Turning Contracts into a Powerhouse of Insights, Control, Efficiency, and Visibility
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l">
+                                                        Veniam
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-[#F8FAFC]">
+                                                        1,103
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-[#F8FAFC]">
+                                                        392
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-[#F8FAFC]">
+                                                        35.54 %
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300 bg-[#E2E7EF]">
+                                                        2,058
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-[#E2E7EF]">
+                                                        641
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-[#E2E7EF]">
+                                                        31.15 %
+                                                    </td>
+                                                </tr>
+                                                <tr class="bg-white">
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                                        # 3
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 whitespace-normal max-w-lg text-cool-gray-600">
+                                                        How to Successfully Navigate Change Management: A Guide for Legal Operations
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l">
+                                                        Exepteur
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-[#F8FAFC]">
+                                                        1,051
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-[#F8FAFC]">
+                                                        297
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-[#F8FAFC]">
+                                                        28.26 %
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300 bg-[#E2E7EF]">
+                                                        2,898
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-[#E2E7EF]">
+                                                        554
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-[#E2E7EF]">
+                                                        19.12 %
+                                                    </td>
+                                                </tr>
+                                                <tr class="bg-white">
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                                        # 4
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 whitespace-normal max-w-lg text-cool-gray-600">
+                                                        How to Manage Legal Holds in Slack
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l">
+                                                        Dolore Counsel
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-[#F8FAFC]">
+                                                        1,015
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-[#F8FAFC]">
+                                                        238
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-[#F8FAFC]">
+                                                        23.45 %
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300 bg-[#E2E7EF]">
+                                                        1,024
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-[#E2E7EF]">
+                                                        244
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-[#E2E7EF]">
+                                                        23.83 %
+                                                    </td>
+                                                </tr>
+                                                <tr class="bg-white">
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                                        # 5
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 whitespace-normal max-w-lg text-cool-gray-600">
+                                                        Trends in eDiscovery Document Review
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l">
+                                                        Astral LLC
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-[#F8FAFC]">
+                                                        973
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-[#F8FAFC]">
+                                                        292
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l bg-[#F8FAFC]">
+                                                        30.01 %
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300 bg-[#E2E7EF]">
+                                                        1,051
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-[#E2E7EF]">
+                                                        337
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 border-l border-slate-50 bg-[#E2E7EF]">
+                                                        32.06 %
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 font-bold" colspan="3">
+                                                        <div class="py-3 flex justify-between align-center">
+                                                            <div class="flex items-center">
+                                                                <span class="mr-1.5">Showing</span>
+                                                                <div class="flex justify-center items-center w-[41px] h-[17px] bg-[#F3F4F6] rounded-[3px]">
+                                                                    <span class="mr-2">5</span>
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="7.481" height="4.531"><path fill="none" stroke="#1a202e" stroke-linecap="round" stroke-linejoin="round" d="m.707.706 3.09 3.324L6.776.706"/></svg>
+                                                                </div>
+                                                                <span class="px-1">of</span> 319
+                                                            </div>
+                                                            <div class=" font-bold text-right">Totals</div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                                        5,417
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                                        1,673
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                                        30.88 %
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                                        10,179
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                                        2,721
+                                                    </td>
+                                                    <td class="px-6 py-3 whitespace-no-wrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                                        26.73 %
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                       </div>
                     </div>
                  </section>
