@@ -1328,6 +1328,827 @@
                 </div>
               </div>
             </section>
+            <section x-show="isSelected($id('tab', whichChild($el, $el.parentElement)))"
+                 :aria-labelledby="$id('tab', whichChild($el, $el.parentElement))"
+                 x-cloak
+                 class="w-full mx-auto min-h-screen p-4">
+                <div  class="flex-column space-y-5 max-w-screen-xl m-auto">
+                    <div class="flex flex--row items-center justify-between">
+                      <h1 class="text-2xl font-bold">Smith Legal</h1>
+                      <nav class="flex">
+                        <ol class="flex items-center space-x-4">
+                          <li>
+                            <div class="flex items-center">
+                              <svg class="flex-shrink-0 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                              <span class="ml-4 text-sm font-medium text-gray-500 ">Home</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center">
+                              <svg class="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path></svg>
+                              <span class="ml-4 text-sm font-medium text-gray-500">Dashboard</span>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="flex items-center">
+                              <svg class="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path></svg>
+                              <span class="ml-4 text-sm font-medium text-gray-500">Analytics</span>
+                            </div>
+                          </li>
+                        </ol>
+                      </nav>
+                    </div>
+                    <div class="mt-4 grid grid-cols-1 lg:grid-cols-12 gap-4">
+                      <div class="relative bg-white border border-gray-300 col-span-9 hover:scale-[1.02] group transition hover:z-50">
+                        <div class="absolute -top-1.5 -left-1.5 rounded-full bg-[#CB7C2E] w-3.5 h-3.5 group-hover:hidden">
+                          <div class="rounded-full bg-[#CB7C2E] w-full h-full animate-ping"></div>
+                        </div>
+                        <div class="hidden group-hover:block absolute top-[5px] left-1/2 -translate-x-1/2 w-[325px] rounded-xl bg-[#051444] text-white py-2 px-4 z-50">
+                          <span class="inline-block text-lg font-bold tracking-wide mb-1">Date Range</span>
+                          <span class="inline-block text-base font-medium tracking-wide">View data and metrics based on pre-set time periods or select a custom date range.</span>
+                        </div>
+                        <div class="h-full border-[5px] border-transparent group-hover:border-red-500 rounded p-4 transition">
+                          <div class="flex items-center justify-between">
+                            <h2 class="text-lg font-semibold mb-2">Date Range</h2>
+                          </div>
+                          <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <span class="ml-4">05/01/2022 - 11/01/2022</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="flex items-center justify-center relative bg-white border border-gray-300 col-span-3 p-4">
+                        <div class="flex-1 flex items-center border border-[#d2d6dc] h-[42px] rounded-md text-[#A0A6B1] font-thin px-3">
+                          <span>Change Advertiser...</span>
+                        </div>
+                      </div>
+                      <div class="bg-white  border border-gray-300  lg:col-span-4 p-4">
+                        leads
+                      </div>
+                      <div class="bg-white  border border-gray-300  lg:col-span-4 p-4">
+                        views
+                      </div>
+                      <div class="bg-white  border border-gray-300  lg:col-span-4 p-4">
+                        Success Rate
+                      </div>
+                      <div class="relative bg-white border border-gray-300 col-span-12 hover:scale-[1.02] group transition hover:z-50">
+                        <div class="absolute -top-1.5 -left-1.5 rounded-full bg-[#CB7C2E] w-3.5 h-3.5 group-hover:hidden">
+                          <div class="rounded-full bg-[#CB7C2E] w-full h-full animate-ping"></div>
+                        </div>
+                        <div class="hidden group-hover:block absolute top-[5px] left-1/2 -translate-x-1/2 w-[325px] rounded-xl bg-[#051444] text-white py-2 px-4 z-50">
+                          <span class="inline-block text-lg font-bold tracking-wide mb-1">Resource Performance</span>
+                          <span class="inline-block text-base font-medium tracking-wide">View the performance of all resources during the respective date range, including page views, qualified leads and total leads (which includes qualified leads, unqualified leads and surplus leads), as well as “success rate” (% of qualified leads to page views) and “conversion rate” (% of total leads to page views).</span>
+                        </div>
+                        <div class="h-full border-[5px] border-transparent group-hover:border-red-500 rounded p-4 transition">
+                          <div class="flex items-center justify-between">
+                            <h2 class="text-lg font-semibold mb-2">Resource Performance</h2>
+                          </div>
+                          <div class="align-middle min-w-full overflow-x-auto shadow overflow-hidden">
+                            <div class="flex justify-between mb-4">
+                              <div class="w-1/6 flex items-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 min-w-[19px]" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                                <div class="flex rounded-none shadow-sm">
+                                  <div class="flex items-center pl-3 w-[175px] h-[39px] border border-[#CFD8E3] bg-white text-[#9FA6B2] text-[15px]">
+                                    <span>Search...</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <table class="min-w-full divide-y divide-cool-gray-300 ">
+                              <thead>
+                              <tr class="bg-white font-bold">
+                                <td class="text-center text-primary text-dashboardHeader text-2xl py-5 bg-[#F1F5F9]" colspan="3">Resources</td>
+                                <td class="text-center text-primary text-dashboardHeader text-xl bg-[#E2E8F0]" colspan="3">Performance</td>
+                                <td class="text-center text-primary text-dashboardHeader text-xl border-l bg-[#CFD8E3] py-5" colspan="4">Leads</td>
+                              </tr>
+                              </thead>
+                              <thead>
+                              <tr>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                  <span class="text-left text-xs leading-4 font-medium text-cool-gray-500 font-semibold uppercase tracking-wider">Rank</span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Resource</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Advertiser</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Views</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC] whitespace-nowrap">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Success Rate</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                <span class="whitespace-nowrap flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Conversion Rate</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC] whitespace-nowrap">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Qualified</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>unqualified</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Surplus</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC] whitespace-nowrap">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Total</span>
+                                                                </span>
+                                </th>
+                              </tr>
+                              </thead>
+                              <tbody class="bg-white divide-y divide-cool-gray-300">
+                              <tr class="bg-white">
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                  # 1
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap truncate text-sm leading-5 text-cool-gray-900  max-w-lg text-cool-gray-600">
+                                  The Enterprise Legal Reputation Report
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap truncate text-sm leading-5 text-cool-gray-900  max-w-lg text-cool-gray-600">
+                                  Veniam
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  3,148
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  30.02 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  32.31 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  945
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  69
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  3
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  1,017
+                                </td>
+                              </tr>
+                              <tr class="bg-white">
+                                <td class="px-6 py-3 whitespace-normal text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                  # 2
+                                </td>
+                                <td class="px-6 py-3  text-sm leading-5 text-cool-gray-900 whitespace-nowrap truncate max-w-lg text-cool-gray-600">
+                                  How to Successfully Navigate Change Management: A Guide for Legal Operations
+                                </td>
+                                <td class="px-6 py-3  text-sm leading-5 text-cool-gray-900 whitespace-nowrap truncate max-w-lg text-cool-gray-600">
+                                  Smith Legal
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  2,899
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  19.11 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  21.70 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  554
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  75
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  0
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  629
+                                </td>
+                              </tr>
+                              <tr class="bg-white">
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                  # 3
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 truncate text-cool-gray-900 max-w-lg text-cool-gray-600">
+                                  25 Things I Wish I Learned in Law School
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 truncate text-cool-gray-900 max-w-lg text-cool-gray-600">
+                                  Astral LLC
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  2,584
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  7.00 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  12.11 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  181
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  91
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  41
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  313
+                                </td>
+                              </tr>
+                              <tr class="bg-white">
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                  # 4
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap truncate text-sm leading-5 text-cool-gray-900  max-w-lg text-cool-gray-600">
+                                  Five Job Ad Templates for Small Law Firms
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap truncate text-sm leading-5 text-cool-gray-900  max-w-lg text-cool-gray-600">
+                                  Law Websites United
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  2,505
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  4.83 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  5.35 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  121
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  0
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  13
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  134
+                                </td>
+                              </tr>
+                              <tr class="bg-white">
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                  # 5
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap truncate text-sm leading-5 text-cool-gray-900  max-w-lg text-cool-gray-600">
+                                  Client Portals Make Law Firms More Money
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap truncate text-sm leading-5 text-cool-gray-900  max-w-lg text-cool-gray-600">
+                                  Case Closed Digital Marketing
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  2,419
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  6.57 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  6.57 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  159
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  0
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  0
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  border-l border-b border-white bg-[#E2E7EF]">
+                                  159
+                                </td>
+                              </tr>
+                              </tbody>
+                              <tfoot>
+                              <tr>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 font-bold" colspan="3">
+                                  <div class="py-3 flex justify-between align-center">
+                                    <div class="flex items-center">
+                                      <span class="mr-1.5">Showing</span>
+                                      <div class="flex justify-center items-center w-[41px] h-[17px] bg-[#F3F4F6] rounded-[3px]">
+                                        <span class="mr-2">5</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="7.481" height="4.531"><path fill="none" stroke="#1a202e" stroke-linecap="round" stroke-linejoin="round" d="m.707.706 3.09 3.324L6.776.706"/></svg>
+                                      </div>
+                                      <span class="px-1">of</span> 311
+                                    </div>
+                                    <div class=" font-bold text-right">Totals</div>
+                                  </div>
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  13,555
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  14.46 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  16.61 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  1,960
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  235
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  57
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  2,252
+                                </td>
+                              </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="relative bg-white border border-gray-300 col-span-12 hover:scale-[1.02] group transition hover:z-50">
+                        <div class="absolute -top-1.5 -left-1.5 rounded-full bg-[#CB7C2E] w-3.5 h-3.5 group-hover:hidden">
+                          <div class="rounded-full bg-[#CB7C2E] w-full h-full animate-ping"></div>
+                        </div>
+                        <div class="hidden group-hover:block absolute top-[5px] left-1/2 -translate-x-1/2 w-[325px] rounded-xl bg-[#051444] text-white py-2 px-4 z-50">
+                          <span class="inline-block text-lg font-bold tracking-wide mb-1">Topic Performance</span>
+                          <span class="inline-block text-base font-medium tracking-wide">See how topics are performing during the respective date range based on page views, qualified leads and success rate for your specific campaigns, as well as all campaigns.</span>
+                        </div>
+                        <div class="h-full border-[5px] border-transparent group-hover:border-red-500 rounded p-4 transition">
+                          <div class="flex items-center justify-between">
+                            <h2 class="text-lg font-semibold mb-2">Topic Performance</h2>
+                          </div>
+                          <div class="align-middle min-w-full overflow-x-auto shadow overflow-hidden">
+                            <table class="min-w-full divide-y divide-cool-gray-300 ">
+                              <thead>
+                              <tr class="bg-white font-bold">
+                                <td class="text-center text-primary text-dashboardHeader text-2xl py-5 bg-[#F1F5F9]" colspan="2">Topics</td>
+                                <td class="text-center text-primary text-dashboardHeader text-xl bg-[#E2E8F0]" colspan="3">Smith Legal</td>
+                                <td class="text-center text-primary text-dashboardHeader text-xl border-l bg-[#CFD8E3] py-5" colspan="3">Legal Industry</td>
+                              </tr>
+                              </thead>
+                              <thead>
+                              <tr>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                  <span class="text-left text-xs leading-4 font-medium text-cool-gray-500 font-semibold uppercase tracking-wider">Rank</span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Topic</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Views</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC] whitespace-nowrap">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Leads</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                <span class="whitespace-nowrap flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Success Rate</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC] whitespace-nowrap">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Views</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Leads</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Success Rate</span>
+                                                                </span>
+                                </th>
+                              </tr>
+                              </thead>
+                              <tbody class="bg-white divide-y divide-cool-gray-300">
+                              <tr class="bg-white">
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                  # 1
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  max-w-lg text-cool-gray-600">
+                                  Small Law Firms
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  6,644
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  685
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  10.31 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l">
+                                  25,559
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  2,935
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  11.48
+                                </td>
+                              </tr>
+                              <tr class="bg-white">
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                  # 2
+                                </td>
+                                <td class="px-6 py-3  text-sm leading-5 text-cool-gray-900 whitespace-nowrap truncate max-w-lg text-cool-gray-600">
+                                  Technology, Privacy, and eCommerce
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  5,851
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  581
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  9.93 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l">
+                                  46,686
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  8,594
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  18.41 %
+                                </td>
+                              </tr>
+                              <tr class="bg-white">
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                  # 3
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 truncate text-cool-gray-900 max-w-lg text-cool-gray-600">
+                                  AI
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  4,782
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  492
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  10.29 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l">
+                                  24,619
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  5,438
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  22.09 %
+                                </td>
+                              </tr>
+                              <tr class="bg-white">
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                  # 4
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  max-w-lg text-cool-gray-600">
+                                  Document Management
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  1,618
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  129
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  7.97 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l">
+                                  4,046
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  563
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  13.91 %
+                                </td>
+                              </tr>
+                              <tr class="bg-white">
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                  # 5
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  max-w-lg text-cool-gray-600">
+                                  Operations
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  1,543
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  119
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  7.71 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l">
+                                  51,932
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  9,490
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  18.27 %
+                                </td>
+                              </tr>
+                              </tbody>
+                              <tfoot>
+                              <tr>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 font-bold" colspan="2">
+                                  <div class="py-3 flex justify-between align-center">
+                                    <div class="flex items-center">
+                                      <span class="mr-1.5">Showing</span>
+                                      <div class="flex justify-center items-center w-[41px] h-[17px] bg-[#F3F4F6] rounded-[3px]">
+                                        <span class="mr-2">5</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="7.481" height="4.531"><path fill="none" stroke="#1a202e" stroke-linecap="round" stroke-linejoin="round" d="m.707.706 3.09 3.324L6.776.706"/></svg>
+                                      </div>
+                                      <span class="px-1">of</span> 32
+                                    </div>
+                                    <div class=" font-bold text-right">Totals</div>
+                                  </div>
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  20,438
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  2,006
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  9.82 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  152,842
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  27,020
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  17.68 %
+                                </td>
+                              </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="relative bg-white border border-gray-300 col-span-12 hover:scale-[1.02] group transition hover:z-50">
+                        <div class="absolute -top-1.5 -left-1.5 rounded-full bg-[#CB7C2E] w-3.5 h-3.5 group-hover:hidden">
+                          <div class="rounded-full bg-[#CB7C2E] w-full h-full animate-ping"></div>
+                        </div>
+                        <div class="hidden group-hover:block absolute top-[5px] left-1/2 -translate-x-1/2 w-[325px] rounded-xl bg-[#051444] text-white py-2 px-4 z-50">
+                          <span class="inline-block text-lg font-bold tracking-wide mb-1">Content Type Performance</span>
+                          <span class="inline-block text-base font-medium tracking-wide">See how content types are performing during the respective date range based on page views, qualified leads and success rate for your specific campaigns, as well as all campaigns.</span>
+                        </div>
+                        <div class="h-full border-[5px] border-transparent group-hover:border-red-500 rounded p-4 transition">
+                          <div class="flex items-center justify-between">
+                            <h2 class="text-lg font-semibold mb-2">Content Type Performance</h2>
+                          </div>
+                          <div class="align-middle min-w-full overflow-x-auto shadow overflow-hidden">
+                            <table class="min-w-full divide-y divide-cool-gray-300 ">
+                              <thead>
+                              <tr class="bg-white font-bold">
+                                <td class="text-center text-primary text-dashboardHeader text-2xl py-5 bg-[#F1F5F9]" colspan="2">Content Types</td>
+                                <td class="text-center text-primary text-dashboardHeader text-xl bg-[#E2E8F0]" colspan="3">Smith Legal</td>
+                                <td class="text-center text-primary text-dashboardHeader text-xl border-l bg-[#CFD8E3] py-5" colspan="3">Legal Industry</td>
+                              </tr>
+                              </thead>
+                              <thead>
+                              <tr>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                  <span class="text-left text-xs leading-4 font-medium text-cool-gray-500 font-semibold uppercase tracking-wider">Rank</span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Content Types</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Views</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC] whitespace-nowrap">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Leads</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                <span class="whitespace-nowrap flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Success Rate</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC] whitespace-nowrap">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Views</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Leads</span>
+                                                                </span>
+                                </th>
+                                <th class="px-6 py-3 bg-[#F8FAFC]">
+                                                                <span class="flex items-center space-x-1 text-left text-xs leading-4 font-bold text-primary !text-dashboard-header uppercase tracking-wider">
+                                                                    <span>Success Rate</span>
+                                                                </span>
+                                </th>
+                              </tr>
+                              </thead>
+                              <tbody class="bg-white divide-y divide-cool-gray-300">
+                              <tr class="bg-white">
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                  # 1
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  max-w-lg text-cool-gray-600">
+                                  Guide
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  3,949
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  380
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  9.62 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l">
+                                  89,395
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  17,410
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  19.48 %
+                                </td>
+                              </tr>
+                              <tr class="bg-white">
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                  # 2
+                                </td>
+                                <td class="px-6 py-3  text-sm leading-5 text-cool-gray-900 whitespace-nowrap truncate max-w-lg text-cool-gray-600">
+                                  White Paper
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  2,551
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  262
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  10.27 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l">
+                                  39,607
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  6,369
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  16.08 %
+                                </td>
+                              </tr>
+                              <tr class="bg-white">
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                  # 3
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 truncate text-cool-gray-900 max-w-lg text-cool-gray-600">
+                                  Infographic
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  949
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  51
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  5.37 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l">
+                                  2,439
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  370
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  15.17 %
+                                </td>
+                              </tr>
+                              <tr class="bg-white">
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                  # 4
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  max-w-lg text-cool-gray-600">
+                                  eBook
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  261
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  63
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  24.14 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l">
+                                  31,325
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  5,508
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  17.58 %
+                                </td>
+                              </tr>
+                              <tr class="bg-white">
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l text-cool-gray-600">
+                                  # 5
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900  max-w-lg text-cool-gray-600">
+                                  On-Demand Webinar
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  36
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  2
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-b bg-[#E2E7EF] border-white">
+                                  5.56 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l">
+                                  2,746
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  477
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 border-l border-primary-300">
+                                  17.37 %
+                                </td>
+                              </tr>
+                              </tbody>
+                              <tfoot>
+                              <tr>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 font-bold" colspan="2">
+                                  <div class="py-3 flex justify-between align-center">
+                                    <div class="flex items-center">
+                                      <span class="mr-1.5">Showing</span>
+                                      <div class="flex justify-center items-center w-[41px] h-[17px] bg-[#F3F4F6] rounded-[3px]">
+                                        <span class="mr-2">5</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="7.481" height="4.531"><path fill="none" stroke="#1a202e" stroke-linecap="round" stroke-linejoin="round" d="m.707.706 3.09 3.324L6.776.706"/></svg>
+                                      </div>
+                                      <span class="px-1">of</span> 11
+                                    </div>
+                                    <div class=" font-bold text-right">Totals</div>
+                                  </div>
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  7,746
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  758
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  9.79 %
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  165,512
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  30,134
+                                </td>
+                                <td class="px-6 py-3 whitespace-nowrap text-sm leading-5 text-cool-gray-900 text-gray-700 font-bold border-l">
+                                  18.21 %
+                                </td>
+                              </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+             </section>
         </main>
     </div>
 </body>
